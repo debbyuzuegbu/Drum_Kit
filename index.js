@@ -1,11 +1,21 @@
 // commented a code
 for (var i = 0; i<document.querySelectorAll(".drum").length; i++)
 
+// detecting button press
 document.querySelectorAll("button")[i].addEventListener("click", function () { 
     
     var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
 
-    switch (buttonInnerHTML) {
+
+});
+document.addEventListener("keydown", function(event) {
+    makeSound(event.key);
+
+})
+// detecting button press
+function makeSound(Key) {
+    switch (Key) {
         case "w":
             var crash = new Audio('sounds/crash.mp3');
             crash.play(); 
@@ -38,4 +48,4 @@ document.querySelectorAll("button")[i].addEventListener("click", function () {
 
     }
 
-});
+}
