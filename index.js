@@ -14,8 +14,8 @@ document.addEventListener("keydown", function(event) {
 
 })
 // detecting button press
-function makeSound(Key) {
-    switch (Key) {
+function makeSound(key) {
+    switch (key) {
         case "w":
             var crash = new Audio('sounds/crash.mp3');
             crash.play(); 
